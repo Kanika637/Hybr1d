@@ -1,15 +1,13 @@
-const express=require('express')
-const path=require('path')  
+const http=require('http')
+const app=require('./App')
+const config =require('./config/default')
 
-const app=express()
 
-app.use('/', express.static(path.join(__dirname,'static')))
+const port=config.port;
 
-//for registering
-app.post(' /api/auth/register',async(req,res)=>{
-    console.log(req.body)
-})
+const server=http.createServer(app);
+server.listen(port);
 
-app.listen(5000, ()=>{
-    console.log('Server up at 5000')
-})
+
+
+console.log('Server is running on :127.0.0.1:' +port);

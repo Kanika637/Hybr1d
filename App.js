@@ -21,7 +21,9 @@ app.use(cors());
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
+//all the routes
 //register
 app.use('/api/auth/register', require('./router/register'));
+app.use('/api/auth/login', require('./router/login'));
 
 module.exports=app;

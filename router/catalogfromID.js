@@ -1,10 +1,10 @@
 const express=require('express')
 
  const router=express.Router()
- const User=require('../models/User')
+ const Catalog=require('../models/catalog')
 
- router.get('/',(req,res,next)=>{
-    User.find({"type":"seller"})
+ router.get('/:id',(req,res,next)=>{
+    Catalog.findById(req.params.id)
     .then(result=>{
         res.status(200).json({
             UserData:result

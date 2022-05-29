@@ -27,5 +27,10 @@ app.use('/api/auth/register', require('./router/register'));
 //login
 app.use('/api/auth/login', require('./router/login'));
 //getting sellers list
-app.use(' /api/auth/list-of-sellers', require('./router/SellerList'));
+app.use('/api/auth/list-of-sellers', require('./router/SellerList'));
+// creating a catalog
+app.use('/api/seller/create-catalog', require('./router/catalog'));
+//getting catalogs from ID
+app.use('/api/buyer/seller-catalog/', require('./router/catalogfromID'));
+
 module.exports=app;

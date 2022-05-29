@@ -24,6 +24,8 @@ app.use(bodyParser.json());
 //all the routes
 //register
 app.use('/api/auth/register', require('./router/register'));
+//login
 app.use('/api/auth/login', require('./router/login'));
-
+//getting sellers list
+app.use(' /api/auth/list-of-sellers', require('./router/SellerList'));
 module.exports=app;

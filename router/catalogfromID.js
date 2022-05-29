@@ -3,7 +3,7 @@ const express=require('express')
  const router=express.Router()
  const Catalog=require('../models/catalog')
 
- router.get('/:id',(req,res,next)=>{
+ router.get('/:seller_id',(req,res,next)=>{
     Catalog.findById(req.params.id)
     .then(result=>{
         res.status(200).json({

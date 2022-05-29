@@ -32,5 +32,8 @@ app.use('/api/auth/list-of-sellers', require('./router/SellerList'));
 app.use('/api/seller/create-catalog', require('./router/catalog'));
 //getting catalogs from ID
 app.use('/api/buyer/seller-catalog/', require('./router/catalogfromID'));
+//sending list of items to seller
+app.use('/api/buyer/create-order/', require('./router/ListOfItems'));
+
 
 module.exports=app;
